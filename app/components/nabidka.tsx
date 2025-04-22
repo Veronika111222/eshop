@@ -53,6 +53,6 @@ const testimonials = [
     quote:
       "Rádi Vám vyrobíme šperky na míru, které dokonale odpovídají Vašim představám.",
     name: "Nastřelení náušnic",
-    title: "Cena:200Kč",
+    title: "Cena jedné nastřelené naušnice:200Kč",
   },
 ];
