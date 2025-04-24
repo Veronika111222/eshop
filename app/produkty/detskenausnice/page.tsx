@@ -7,10 +7,10 @@ type Product = {
   image: string;
 };
 
-const kidsEarrings: Product[] = [
-  { id: 1, name: 'Zlaté studs „Srdíčko“',  price: 35, image: '/images/kids/heart-studs.jpg' },
-  { id: 2, name: 'Stříbrné náušnice „Motýlek“', price: 28, image: '/images/kids/butterfly.jpg' },
-  { id: 3, name: 'Barevné kruhy „Duha“',       price: 22, image: '/images/kids/rainbow-hoop.jpg' },
+const kidsEarrings: Dětské náušnice[] = [
+  { id: 1, name: 'Zlaté naušnice "kytičky“',  price: 35, image: '/images/kyticky.jpg' },
+  { id: 2, name: 'Stříbrné náušnice „kytičky“', price: 28, image: '/images/kyticky1.jpg' },
+  { id: 3, name: 'Zlaté naušnice "kytičky“',       price: 22, image: '/images/kyticky2.jpg' },
 ];
 
 const KidsEarringsPage: React.FC = () => (
