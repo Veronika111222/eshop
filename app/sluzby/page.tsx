@@ -204,8 +204,8 @@ export default function ServicesPage() {
         
         <div className="max-w-3xl mx-auto w-full px-6 relative">
           {/* Dekorativní uvozovky */}
-          <div className="absolute -top-10 -left-4 text-amber-600/20 text-9xl font-serif">"</div>
-          <div className="absolute -bottom-32 -right-4 text-amber-600/20 text-9xl font-serif transform rotate-180">"</div>
+          <div className="absolute -top-10 -left-4 text-amber-600/20 text-9xl font-serif">&quot;</div>
+          <div className="absolute -bottom-32 -right-4 text-amber-600/20 text-9xl font-serif transform rotate-180">&quot;</div>
           
           <div className="bg-neutral-800/30 rounded-xl p-10 border border-neutral-700 shadow-xl relative z-10">
             <div className="text-center space-y-8">

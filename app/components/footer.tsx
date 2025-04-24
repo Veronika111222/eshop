@@ -111,8 +111,8 @@ const Footer = () => {
               </div>
               
               <p className="text-gray-400 leading-relaxed mb-8 border-l-2 border-amber-600 pl-4 italic">
-                "Exkluzivní zlatnictví nabízející jedinečné šperky pro nezapomenutelné chvíle. 
-                Každý náš kus vypráví příběh elegance, kvality a preciznosti."
+                &quot;Exkluzivní zlatnictví nabízející jedinečné šperky pro nezapomenutelné chvíle. 
+                Každý náš kus vypráví příběh elegance, kvality a preciznosti.&quot;
               </p>
               
               <div className="flex space-x-3">
