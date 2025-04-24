@@ -7,7 +7,7 @@ type Product = {
   image: string;
 };
 
-const kidsEarrings: Dětské náušnice[] = [
+const kidsEarrings: Product[] = [
   { id: 1, name: 'Zlaté naušnice "kytičky“',  price: 35, image: '/images/kyticky.jpg' },
   { id: 2, name: 'Stříbrné náušnice „kytičky“', price: 28, image: '/images/kyticky1.jpg' },
   { id: 3, name: 'Zlaté naušnice "kytičky“',       price: 22, image: '/images/kyticky2.jpg' },
