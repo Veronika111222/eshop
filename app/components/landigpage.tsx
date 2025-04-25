@@ -62,7 +62,7 @@ const products = [
     image: "/imgs/diamanty.jpg",
     description: "Ručně vyráběné šperky z nejkvalitnějších diamantů.",
     price: "",
-    link: "/Diamantové šperky"
+    link: "/produkty/diamant"
   },
   { 
     id: 2, 
@@ -70,7 +70,7 @@ const products = [
     image: "/imgs/perly.jpg",
     description: "Elegantní perlové šperky z kvalitních přírodních perel.",
     price: "",
-    link: "/prirodni-perly",
+    link: "/produkty/perly",
   },
   { 
     id: 3, 
@@ -82,7 +82,7 @@ const products = [
   },
   { 
     id: 4, 
-    title: "Zásnubní a Snubní prsteny", 
+    title: "Snubní prsteny", 
     image: "/imgs/snubni prsteny 4.jpg",
     description: "Dokonalé prsteny pro váš velký den a celý společný život.",
     price: "",
@@ -91,7 +91,15 @@ const products = [
   { 
     id: 5, 
     title: "Prsteny", 
-    image: "/imgs/prsten.jpg",
+    image: "/imgs/prsten4.jpg",
+    description: "Luxusní prsteny pro každou příležitost.",
+    price: "",
+    link: "/prsteny"
+  },
+   { 
+    id: 5, 
+    title: "Zásnubní prsteny", 
+    image: "/imgs/prsten3.jpg",
     description: "Luxusní prsteny pro každou příležitost.",
     price: "",
     link: "/prsteny"
@@ -118,7 +126,7 @@ const products = [
     image: "/imgs/detske nausnice 2.jpg",
     description: "Jemné náušnice vhodné i pro nejmenší.",
     price: "",
-    link: "/detske-nausnice"
+    link: "/produkty/detskenausnice"
   },
   { 
     id: 9, 
@@ -171,7 +179,7 @@ const LandingPage: React.FC = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
             <div className="inline-block p-1 border-2 border-amber-500 rounded-lg mb-6">
-              <span className="text-amber-400 text-lg font-light tracking-widest">LUXUSNÍ ZLATNICTVÍ</span>
+              <span className="text-amber-400 text-lg font-light tracking-widest">zlatnictví Perla</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-yellow-500 drop-shadow-lg">
               Objevte luxus a eleganci
@@ -313,8 +321,8 @@ const LandingPage: React.FC = () => {
                     <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Tradice od roku 1992</h3>
-                <p className="text-gray-400">Třicet let zkušeností a tisíce spokojených zákazníků po celé České republice.</p>
+                <h3 className="text-xl font-bold text-white mb-2"></h3>
+                <p className="text-gray-400"></p>
               </div>
               
               <div className="text-center p-6 rounded-lg border border-neutral-800 bg-neutral-800 hover:border-amber-500 transition-all duration-300">
@@ -323,8 +331,8 @@ const LandingPage: React.FC = () => {
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Záruka a servis</h3>
-                <p className="text-gray-400">Doživotní záruka na zpracování a komplexní pozáruční servis všech našich šperků.</p>
+                <h3 className="text-xl font-bold text-white mb-2"></h3>
+                <p className="text-gray-400">.</p>
               </div>
             </div>
           </div>

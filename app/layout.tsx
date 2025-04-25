@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   authors: [
     { name: "Zlatnictví Perla" }
   ],
+  icons: {
+    icon: "/imgs/favicon.png",
+  },
   creator: "Zlatnictví Perla",
   publisher: "Zlatnictví Perla",
   formatDetection: {

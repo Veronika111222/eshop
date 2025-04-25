@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import MapSection from "../components/mapa";
+import Image from "next/image";
 
 export default function ContactPage() {
   return (
@@ -11,8 +12,43 @@ export default function ContactPage() {
       {/* Navigační lišta */}
       <Navbar />
       
+      {/* Nová sekce pro fotografii přes celou šířku */}
+      <div className="relative w-full h-[40vh] overflow-hidden">
+        {/* Fotografie */}
+        <div className="absolute inset-0">
+          <Image
+            src="/imgs/uvod4.jpg" // Nahraďte skutečnou cestou k vaší fotografii
+            alt="Kontaktujte Zlatnictví Perla"
+            fill
+            className="object-cover object-center brightness-75"
+            priority
+          />
+        </div>
+        
+        {/* Překryvy pro zlepšení čitelnosti a efektu */}
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-black/50 to-transparent opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/70" />
+        
+        {/* Tenká zlatá linka v horní části */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-700 via-amber-500 to-amber-700"></div>
+        
+        {/* Obsah na fotografii - volitelné */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center px-4">
+            <div className="inline-block p-1 border-2 border-amber-500 rounded-lg mb-2">
+              <span className="text-amber-400 text-sm font-light tracking-widest uppercase">Zlatnictví Perla</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                Kontaktujte nás
+              </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      
       {/* Hlavní obsah */}
-      <main className="flex-grow pt-28 pb-16">
+      <main className="flex-grow pt-16 pb-16">
         <div className="max-w-7xl mx-auto px-4 space-y-16">
           {/* Nadpis sekce s dekorativními prvky */}
           <div className="text-center relative mb-20">

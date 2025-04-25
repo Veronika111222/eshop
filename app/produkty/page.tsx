@@ -10,9 +10,9 @@ import Footer from "../components/footer";
 /** Jednotlivé kategorie – adresářové názvy přesně odpovídají podsložkám v app/produkty/ */
 const categories = [
   {
-    key: "deckenausnice",
+    key: "detskenausnice",
     label: "Dětské náušnice",
-    img: "/imgs/decke nausnice.jpg",
+    img: "/imgs/detske nausnice.jpg",
   },
   {
     key: "diamant",
@@ -22,35 +22,35 @@ const categories = [
   {
     key: "kameny",
     label: "Drahé kameny",
-    img: "/imgs/kategorie/kameny.jpg",
+    img: "/imgs/malachit.jpg",
   },
-  { key: "krest", label: "Křest", img: "/imgs/kategorie/krest.jpg" },
+  { key: "zasnubní prsteny", label: "zásnubníprsteny", img: "/imgs/prsten5.jpg" },
   {
     key: "nahrdelniky",
     label: "Náhrdelníky",
-    img: "/imgs/kategorie/nahrdelniky.jpg",
+    img: "/imgs/privesky1.jpg",
   },
   { key: "naramky", label: "Náramky", img: "/imgs/naramky1.jpg" },
   {
     key: "narozenidetatka",
     label: "Narození děťátka",
-    img: "/imgs/kategorie/narozenidetatka.jpg",
+    img: "/imgs/narozeni.jpg",
   },
-  { key: "narozeniny", label: "Narozeniny", img: "/imgs/kategorie/narozeniny.jpg" },
-  { key: "perly", label: "Perly", img: "/imgs/kategorie/perly.jpg" },
-  { key: "privesky", label: "Přívěsky", img: "/imgs/kategorie/privesky.jpg" },
+  { key: "narozeniny", label: "Narozeniny", img: "/imgs/privesky2.jpg" },
+  { key: "perly", label: "Perly", img: "/imgs/soupravky 2.jpg" },
+  { key: "privesky", label: "Přívěsky", img: "/imgs/privesky3.jpg" },
   { key: "promoce", label: "Promoce", img: "/imgs/kategorie/promoce.jpg" },
-  { key: "prsteny", label: "Prsteny", img: "/imgs/kategorie/prsteny.jpg" },
+  { key: "prsteny", label: "Prsteny", img: "/imgs/prsten4.jpg" },
   {
     key: "snubniprsteny",
     label: "Snubní prsteny",
     img: "/imgs/snubni prsteny5.jpg",
   },
-  { key: "soupravy", label: "Soupravy", img: "/imgs/kategorie/soupravy.jpg" },
+  { key: "soupravy", label: "Soupravy", img: "/imgs/soupravky1.jpg" },
   {
-    key: "svatebnisperky",
-    label: "Svatební šperky",
-    img: "/imgs/kategorie/svatebnisperky.jpg",
+    key: "naušnice",
+    label: "naušnice",
+    img: "/imgs/nausnice1.jpg",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function ProductsPage() {
         
         <div className="relative h-[45vh] w-full overflow-hidden">
           <Image
-            src="/imgs/kategorie/header-jewelry.jpg" 
+            src="/imgs/jewelry-panorama.jpg" 
             alt="Šperky"
             fill
             priority
@@ -111,7 +111,7 @@ export default function ProductsPage() {
               <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
                 Kolekce
               </span>
-              <span className="text-white"> šperkù</span>
+              <span className="text-white"> šperků</span>
               <div className="h-1 w-20 bg-amber-500 mx-auto mt-4 rounded-full"></div>
             </h1>
             
