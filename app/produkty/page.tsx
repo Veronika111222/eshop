@@ -24,11 +24,11 @@ const categories = [
     label: "Drahé kameny",
     img: "/imgs/malachit.jpg",
   },
-  { key: "zasnubní prsteny", label: "zásnubníprsteny", img: "/imgs/prsten5.jpg" },
+  { key: "zasnubniprsteny", label: "zásnubníprsteny", img: "/imgs/prsten5.jpg" },
   {
     key: "nahrdelniky",
     label: "Náhrdelníky",
-    img: "/imgs/privesky1.jpg",
+    img: "/imgs/nahrdelnik1.jpg",
   },
   { key: "naramky", label: "Náramky", img: "/imgs/naramky1.jpg" },
   {
@@ -37,20 +37,20 @@ const categories = [
     img: "/imgs/narozeni.jpg",
   },
   { key: "narozeniny", label: "Narozeniny", img: "/imgs/privesky2.jpg" },
-  { key: "perly", label: "Perly", img: "/imgs/soupravky 2.jpg" },
+  { key: "perly", label: "Perly", img: "/imgs/perly3.jpg" },
   { key: "privesky", label: "Přívěsky", img: "/imgs/privesky3.jpg" },
   { key: "promoce", label: "Promoce", img: "/imgs/kategorie/promoce.jpg" },
-  { key: "prsteny", label: "Prsteny", img: "/imgs/prsten4.jpg" },
+  { key: "prsteny", label: "Prsteny", img: "/imgs/prsten5.jpg" },
   {
     key: "snubniprsteny",
     label: "Snubní prsteny",
-    img: "/imgs/snubni prsteny5.jpg",
+    img: "/imgs/prsteny..jpg",
   },
-  { key: "soupravy", label: "Soupravy", img: "/imgs/soupravky1.jpg" },
+  { key: "soupravy", label: "Soupravy", img: "/imgs/set.jpg" },
   {
     key: "naušnice",
     label: "naušnice",
-    img: "/imgs/nausnice1.jpg",
+    img: "/imgs/nausnice2.jpg",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function ProductsPage() {
         
         <div className="relative h-[45vh] w-full overflow-hidden">
           <Image
-            src="/imgs/jewelry-panorama.jpg" 
+            src="/imgs/jewelry.jpg" 
             alt="Šperky"
             fill
             priority

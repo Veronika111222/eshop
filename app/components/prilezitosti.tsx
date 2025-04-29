@@ -73,7 +73,7 @@ const occasions = [
   {
     id: 3,
     title: "Narozeniny a svátky",
-    image: "/imgs/promoce.jpg",
+    image: "/imgs/safir.jpg",
     desc: "Darujte radost – každý kousek je připraven oslavit váš den.",
     link: "/prilezitosti/narozeniny-svatky"
   },
@@ -87,7 +87,7 @@ const occasions = [
   {
     id: 5,
     title: "Svatební šperky",
-    image: "/imgs/svatebni sperky.jpg",
+    image: "/imgs/diamond.jpg",
     desc: "Věčné ano si zaslouží šperk, který zůstane navždy.",
     link: "/prilezitosti/svatebni-sperky"
   },

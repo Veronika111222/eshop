@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -14,59 +14,95 @@ type Product = {
   price: number;
   image: string;
   description: string;
+  material: "gold" | "silver";
 };
 
-const naturalStones: Product[] = [
+const earrings: Product[] = [
   { 
     id: 1, 
-    name: 'Náhrdelník s ametystem "Mystique"', 
-    price: 1250, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Nádherný náhrdelník s broušeným ametystem zasazeným do 18k růžového zlata, doplněný jemnými detaily.'
+    name: 'Zlaté náušnice "Diamond Point"', 
+    price: 1450, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Elegantní náušnice z 18k zlata s briliantem o váze 0.1ct, ideální pro každodenní nošení i formální příležitosti.',
+    material: "gold"
   },
   { 
     id: 2, 
-    name: 'Náramek s opálem "Oasis"', 
-    price: 1680, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Luxusní náramek s australským opálem, který mění barvy podle úhlu pohledu, zasazený v bílém zlatě.'
+    name: 'Stříbrné náušnice "Pearl Elegance"', 
+    price: 690, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Klasické náušnice ze stříbra s pravými sladkovodními perlami o průměru 6mm, které dodávají jemný a ženský nádech.',
+    material: "silver"
   },
   { 
     id: 3, 
-    name: 'Prsten s turmalínem "Spektrum"', 
-    price: 1450, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Výjimečný prsten s vzácným watermelon turmalínem, který zobrazuje přirozený přechod barev od růžové po zelenou.'
+    name: 'Zlaté náušnice "Sapphire Harmony"', 
+    price: 2250, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Luxusní náušnice z 14k zlata s modrými safíry, které vynikají svou jiskřivostí. Bezpečné klapkové zapínání zabraňuje ztrátě.',
+    material: "gold"
   },
   { 
     id: 4, 
-    name: 'Náušnice s akvamarínem "Oceán"', 
-    price: 1890, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Elegantní náušnice s brilantně modrými akvamaríny připomínajícími čistotu oceánu, zasazené v bílém zlatě.'
+    name: 'Stříbrné náušnice "Art Deco"', 
+    price: 780, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Stylové stříbrné náušnice s francouzským zapínáním inspirované art deco stylem, zdobené černým onyxem a drobnými zirkony.',
+    material: "silver"
   },
   { 
     id: 5, 
-    name: 'Přívěsek s tanzanitem "Twilight"', 
-    price: 2100, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Unikátní přívěsek s vzácným tanzanitem o váze 1.2ct, který vyniká svou výjimečnou fialovo-modrou barvou.'
+    name: 'Zlaté kroužky "Twisted Hoop"', 
+    price: 1890, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Elegantní kroucené kroužky z 18k zlata o průměru 25mm, které dodají šmrnc každému outfitu. Klasický design s moderním zpracováním.',
+    material: "gold"
   },
   { 
     id: 6, 
-    name: 'Sada s malachitem "Terra"', 
-    price: 1750, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Luxusní sada šperků s malachitem, zahrnující náhrdelník a náušnice s jedinečnou zelenou strukturou kamene.'
+    name: 'Stříbrné visací náušnice "Cascade"', 
+    price: 850, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Efektní visací náušnice ze stříbra s kaskádou jemných řetízků zakončených drobnými hvězdičkami. Délka 5.5cm.',
+    material: "silver"
+  },
+  { 
+    id: 7, 
+    name: 'Zlaté náušnice "Mini Geometric"', 
+    price: 1150, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Minimalistické puzetové náušnice z 14k zlata v geometrickém designu - dokonalý doplněk pro moderní ženu, která ocení jednoduchost a eleganci.',
+    material: "gold"
+  },
+  { 
+    id: 8, 
+    name: 'Stříbrné náušnice "Emerald Classic"', 
+    price: 920, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Klasické šroubkové náušnice ze stříbra s přírodními smaragdy vsazenými do oválného designu, který zvýrazňuje jejich zelenou barvu.',
+    material: "silver"
+  },
+  { 
+    id: 9, 
+    name: 'Zlaté náušnice "Ruby Elegance"', 
+    price: 2480, 
+    image: '/imgs/nausnice.jpg',
+    description: 'Luxusní klapkové náušnice z 18k zlata s rubíny obklopenými drobnými diamanty pro výrazný a sofistikovaný vzhled.',
+    material: "gold"
   },
 ];
 
-const NaturalStonesPage: React.FC = () => {
+const EarringsPage: React.FC = () => {
   const collectionRef = useRef<HTMLDivElement>(null);
+  const [materialFilter, setMaterialFilter] = useState<"all" | "gold" | "silver">("all");
   
   const scrollToCollection = () => {
     collectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const filteredEarrings = materialFilter === "all" 
+    ? earrings 
+    : earrings.filter(earring => earring.material === materialFilter);
 
   return (
     <div className="flex flex-col min-h-screen bg-neutral-900 text-gray-300">
@@ -89,14 +125,14 @@ const NaturalStonesPage: React.FC = () => {
       {/* Hero sekce */}
       <section className="relative w-full py-20 md:py-32 overflow-hidden">
         {/* Pozadí s gradientem */}
-        <div className="absolute inset-0 bg-[url('/imgs/prirodni-kameny.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/imgs/nausnice.jpg')] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black"></div>
         
         {/* Tenká zlatá linka v horní části */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-700 via-amber-500 to-amber-700"></div>
         
-        {/* Navigační šipka v pravém horním rohu hero sekce */}
-        <div className="absolute top-4 right-4 z-10">
+        {/* Navigační šipka v levém horním rohu hero sekce */}
+        <div className="absolute top-4 left-4 z-10">
           <button 
             onClick={() => window.history.back()}
             className="rounded-full bg-amber-600/80 hover:bg-amber-500 p-3 text-white shadow-lg transition-all duration-300 hover:scale-105"
@@ -116,17 +152,17 @@ const NaturalStonesPage: React.FC = () => {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-amber-300 to-amber-600 bg-clip-text text-transparent">
-                Přírodní kameny
+                Zlaté a stříbrné náušnice
               </span>
             </h1>
             
             <div className="h-1 w-24 bg-amber-500 rounded mb-6"></div>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Přírodní kameny jsou svědectvím geologických zázraků naší planety. Naše exkluzivní kolekce šperků s přírodními kameny spojuje krásu a energii těchto vzácných nerostů s precizním řemeslným zpracováním. Každý kus je navržen tak, aby vyzdvihl přirozenou krásu kamene a vytvářel jedinečné spojení s jeho nositelem.
+              Náušnice jsou nepostradatelnou součástí každého šperkovníku, rámují obličej a dokonale podtrhují váš styl. Naše exkluzivní kolekce nabízí náušnice všech typů - od elegantních puzetových, přes bezpečné šroubkové a klapkové, až po výrazné kroužky a visací náušnice.
             </p>
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Pečlivě vybíráme pouze kameny té nejvyšší kvality a udržitelného původu, aby váš šperk byl nejen krásný, ale i eticky zodpovědný. Objevte jedinečnou energii a krásu přírodních kamenů v naší luxusní kolekci.
+              Každý pár náušnic v naší kolekci je vyroben z nejkvalitnějších materiálů — 14k a 18k zlata nebo ryzího stříbra, často doplněné o diamanty, drahé kameny či perly. Vyberte si náušnice, které budou dokonale odrážet váš osobní styl a eleganci.
             </p>
             
             <button 
@@ -140,8 +176,8 @@ const NaturalStonesPage: React.FC = () => {
           <div className="md:w-1/2 relative">
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl transform rotate-3">
               <Image
-                src="/imgs/prirodni-kameny.jpg"
-                alt="Šperky s přírodními kameny"
+                src="/imgs/nausnice.jpg"
+                alt="Zlaté a stříbrné náušnice"
                 fill
                 className="object-cover"
                 priority
@@ -162,21 +198,55 @@ const NaturalStonesPage: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16" ref={collectionRef}>
-            <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Exkluzivita & Kvalita</span>
+            <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Exkluzivita & Styl</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Naše <span className="text-amber-500">přírodní</span> kameny
+              Naše <span className="text-amber-500">náušnice</span>
             </h2>
             <div className="h-1 w-24 bg-amber-500 mx-auto rounded"></div>
             <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
-              Vyberte si z naší exkluzivní nabídky šperků s přírodními kameny, kde každý kus je ztělesněním přírodní krásy a řemeslné dokonalosti.
+              Vyberte si z naší exkluzivní kolekce zlatých a stříbrných náušnic, které doplní váš osobitý šarm a eleganci.
             </p>
+            
+            {/* Filtry materiálu */}
+            <div className="flex justify-center mt-8 space-x-4">
+              <button 
+                onClick={() => setMaterialFilter("all")}
+                className={`px-6 py-2 rounded-full transition-all ${
+                  materialFilter === "all" 
+                    ? "bg-amber-600 text-white" 
+                    : "bg-neutral-800 text-gray-300 hover:bg-neutral-700"
+                }`}
+              >
+                Všechny náušnice
+              </button>
+              <button 
+                onClick={() => setMaterialFilter("gold")}
+                className={`px-6 py-2 rounded-full transition-all ${
+                  materialFilter === "gold" 
+                    ? "bg-amber-600 text-white" 
+                    : "bg-neutral-800 text-gray-300 hover:bg-neutral-700"
+                }`}
+              >
+                Zlaté
+              </button>
+              <button 
+                onClick={() => setMaterialFilter("silver")}
+                className={`px-6 py-2 rounded-full transition-all ${
+                  materialFilter === "silver" 
+                    ? "bg-amber-600 text-white" 
+                    : "bg-neutral-800 text-gray-300 hover:bg-neutral-700"
+                }`}
+              >
+                Stříbrné
+              </button>
+            </div>
           </div>
           
           <section className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {naturalStones.map(({ id, name, price, image, description }) => (
+            {filteredEarrings.map(({ id, name, price, image, description, material }) => (
               <article
                 key={id}
-                className="bg-neutral-800 rounded-lg border border-neutral-700 hover:border-amber-500 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex flex-col"
+                className={`bg-neutral-800 rounded-lg border border-neutral-700 hover:border-amber-500 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex flex-col`}
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
@@ -187,8 +257,10 @@ const NaturalStonesPage: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
                   <div className="absolute top-4 right-4">
-                    <span className="bg-amber-600 text-white text-xs px-3 py-1 rounded-full font-medium shadow-lg">
-                      Exkluzivní
+                    <span className={`${
+                      material === "gold" ? "bg-amber-600" : "bg-gray-500"
+                    } text-white text-xs px-3 py-1 rounded-full font-medium shadow-lg`}>
+                      {material === "gold" ? "Zlaté" : "Stříbrné"}
                     </span>
                   </div>
                 </div>
@@ -219,7 +291,7 @@ const NaturalStonesPage: React.FC = () => {
         </div>
       </main>
 
-      {/* Info sekce o přírodních kamenech */}
+      {/* Info sekce o náušnicích */}
       <section className="py-20 bg-neutral-900 relative">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-neutral-800/40 rounded-xl p-10 border border-neutral-700 shadow-xl">
@@ -227,8 +299,8 @@ const NaturalStonesPage: React.FC = () => {
               <div className="md:w-1/3">
                 <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
                   <Image
-                    src="/imgs/prirodni-kameny.jpg"
-                    alt="Přírodní kámen detail"
+                    src="/imgs/nausnice.jpg"
+                    alt="Náušnice detail"
                     fill
                     className="object-cover"
                   />
@@ -237,7 +309,7 @@ const NaturalStonesPage: React.FC = () => {
               
               <div className="md:w-2/3">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                  Proč vybrat <span className="text-amber-500">přírodní kameny</span>?
+                  Proč vybrat <span className="text-amber-500">náušnice</span> u nás?
                 </h3>
                 
                 <div className="space-y-4">
@@ -248,7 +320,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Jedinečná krása</span> - Každý přírodní kámen je naprosto unikátní se svou vlastní barvou, strukturou a charakterem, což z vašeho šperku činí skutečný originál.
+                      <span className="text-amber-500 font-semibold">Různé typy zapínání</span> - Nabízíme širokou škálu typů zapínání - od klasických puzetových přes bezpečné šroubkové a klapkové, až po francouzské zapínání či kroužky - pro maximální pohodlí a bezpečnost.
                     </p>
                   </div>
                   
@@ -259,7 +331,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Energetické vlastnosti</span> - Po tisíciletí jsou přírodním kamenům přisuzovány léčivé a harmonizující vlastnosti, které mohou přinášet rovnováhu a pozitivní energii do vašeho života.
+                      <span className="text-amber-500 font-semibold">Hypoalergenní materiály</span> - Naše zlaté i stříbrné náušnice jsou vyrobeny z kvalitních hypoalergenních materiálů, které jsou vhodné i pro citlivé uši a zaručují pohodlné celodenní nošení.
                     </p>
                   </div>
                   
@@ -270,7 +342,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Přírodní původ</span> - Přírodní kameny jsou vytvářeny samotnými geologickými procesy Země po miliony let, což z nich činí skutečné umělecké dílo matky přírody.
+                      <span className="text-amber-500 font-semibold">Pro každou příležitost</span> - Od decentních kousků pro každodenní nošení, přes sofistikované modely pro pracovní prostředí, až po výrazné náušnice pro zvláštní příležitosti - máme náušnice pro každý moment vašeho života.
                     </p>
                   </div>
                   
@@ -281,7 +353,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Udržitelná volba</span> - Vybíráme kameny z etických zdrojů a podporujeme zodpovědnou těžbu, což činí z vašeho šperku nejen krásnou, ale i ekologicky uvědomělou volbu.
+                      <span className="text-amber-500 font-semibold">Perfektní dárek</span> - Náušnice jsou jedním z nejoblíbenějších dárků - jejich univerzální velikost a rozmanitost stylů z nich činí ideální dárek, kterým určitě potěšíte své blízké.
                     </p>
                   </div>
                 </div>
@@ -291,7 +363,7 @@ const NaturalStonesPage: React.FC = () => {
                     href="/kontakt" 
                     className="inline-flex items-center text-amber-500 hover:text-amber-400 transition-colors"
                   >
-                    <span>Kontaktujte nás pro osobní konzultaci</span>
+                    <span>Kontaktujte nás pro více informací</span>
                     <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
@@ -309,4 +381,4 @@ const NaturalStonesPage: React.FC = () => {
   );
 };
 
-export default NaturalStonesPage;
+export default EarringsPage;

@@ -12,26 +12,26 @@ const testimonials = [
   },
   {
     quote:
-      "Nabízíme výkup zlata a stříbra. Aktuální cena výkupu na dotaz v prodejně nebo telefonicky.",
+      "Nabízíme výkup zlata a stříbra.",
     name: "Výkup zlata a stříbra",
-    title: "",
+    title: "Aktuální cena výkupu na dotaz v prodejně nebo telefonicky.",
   },
   {
     quote: "Nabízíme dárkové poukazy, které si obdarovaní mohou vyměnit za šperky dle vlastního výběru.",
     name: "Dárkové poukazy",
-    title: "",
+    title: "Hodnota Vámi zvolená",
   },
   {
     quote:
       "Naši zkušení zlatníci opraví Vaše šperky, upraví vellikost prstenů a obnoví jejich lesk díky profesionální renovaci.",
-    name: "Opravy a čištění šperků",
-    title: "Letování zlatých šperků cena: 220Kč",
+    name: "Opravy šperků",
+    title: "Letování zlatých šperků: 200Kč - 220Kč, stříbrných šperků: 160Kč",
   },
   {
     quote:
-      "Rádi Vám vyrobíme šperky na míru, které dokonale odpovídají Vašim představám.",
-    name: "Šperky na míru",
-    title: "",
+      "Vyčistíme a obnovýme lesk Vašim stávajícím šperkům.",
+    name: "Čištění šperků",
+    title: "cena: 50Kč - 70Kč/kus nebo pár",
   },
   {
     quote:

@@ -16,52 +16,52 @@ type Product = {
   description: string;
 };
 
-const naturalStones: Product[] = [
+const engagementRings: Product[] = [
   { 
     id: 1, 
-    name: 'Náhrdelník s ametystem "Mystique"', 
-    price: 1250, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Nádherný náhrdelník s broušeným ametystem zasazeným do 18k růžového zlata, doplněný jemnými detaily.'
+    name: 'Zásnubní prsten "Solitaire Elegance"', 
+    price: 2450, 
+    image: '/imgs/zasnubni-prsteny.jpg',
+    description: 'Klasický zásnubní prsten s briliantem o váze 0.5ct zasazeným v 18k bílém zlatě, symbol čisté elegance.'
   },
   { 
     id: 2, 
-    name: 'Náramek s opálem "Oasis"', 
-    price: 1680, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Luxusní náramek s australským opálem, který mění barvy podle úhlu pohledu, zasazený v bílém zlatě.'
+    name: 'Zásnubní prsten "Trilogy Romance"', 
+    price: 3280, 
+    image: '/imgs/zasnubni-prsteny.jpg',
+    description: 'Symbolický prsten s třemi diamanty představujícími minulost, přítomnost a budoucnost vašeho vztahu.'
   },
   { 
     id: 3, 
-    name: 'Prsten s turmalínem "Spektrum"', 
-    price: 1450, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Výjimečný prsten s vzácným watermelon turmalínem, který zobrazuje přirozený přechod barev od růžové po zelenou.'
+    name: 'Zásnubní prsten "Vintage Rose"', 
+    price: 2980, 
+    image: '/imgs/zasnubni-prsteny.jpg',
+    description: 'Romantický prsten s centrálním diamantem obklopeným menšími kameny v designu inspirovaném vintage stylem, zasazený v růžovém zlatě.'
   },
   { 
     id: 4, 
-    name: 'Náušnice s akvamarínem "Oceán"', 
-    price: 1890, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Elegantní náušnice s brilantně modrými akvamaríny připomínajícími čistotu oceánu, zasazené v bílém zlatě.'
+    name: 'Zásnubní prsten "Princess Dream"', 
+    price: 3750, 
+    image: '/imgs/zasnubni-prsteny.jpg',
+    description: 'Luxusní prsten s diamantem princess cut o váze 0.7ct zasazeným v platině, dokonalý pro moderní ženu.'
   },
   { 
     id: 5, 
-    name: 'Přívěsek s tanzanitem "Twilight"', 
-    price: 2100, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Unikátní přívěsek s vzácným tanzanitem o váze 1.2ct, který vyniká svou výjimečnou fialovo-modrou barvou.'
+    name: 'Zásnubní prsten "Halo Brilliance"', 
+    price: 3190, 
+    image: '/imgs/zasnubni-prsteny.jpg',
+    description: 'Oslnivý prsten s centrálním briliantem obklopeným prstencem menších diamantů, který zvýrazňuje jeho lesk a velikost.'
   },
   { 
     id: 6, 
-    name: 'Sada s malachitem "Terra"', 
-    price: 1750, 
-    image: '/imgs/prirodni-kameny.jpg',
-    description: 'Luxusní sada šperků s malachitem, zahrnující náhrdelník a náušnice s jedinečnou zelenou strukturou kamene.'
+    name: 'Zásnubní prsten "Infinity Love"', 
+    price: 2890, 
+    image: '/imgs/zasnubni-prsteny.jpg',
+    description: 'Unikátní prsten v designu nekonečna s diamanty zasazenými po stranách, symbolizující věčnou lásku a oddanost.'
   },
 ];
 
-const NaturalStonesPage: React.FC = () => {
+const EngagementRingsPage: React.FC = () => {
   const collectionRef = useRef<HTMLDivElement>(null);
   
   const scrollToCollection = () => {
@@ -89,14 +89,14 @@ const NaturalStonesPage: React.FC = () => {
       {/* Hero sekce */}
       <section className="relative w-full py-20 md:py-32 overflow-hidden">
         {/* Pozadí s gradientem */}
-        <div className="absolute inset-0 bg-[url('/imgs/prirodni-kameny.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/imgs/zasnubni-prsteny.jpg')] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black"></div>
         
         {/* Tenká zlatá linka v horní části */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-700 via-amber-500 to-amber-700"></div>
         
-        {/* Navigační šipka v pravém horním rohu hero sekce */}
-        <div className="absolute top-4 right-4 z-10">
+        {/* Navigační šipka v levém horním rohu hero sekce */}
+        <div className="absolute top-4 left-4 z-10">
           <button 
             onClick={() => window.history.back()}
             className="rounded-full bg-amber-600/80 hover:bg-amber-500 p-3 text-white shadow-lg transition-all duration-300 hover:scale-105"
@@ -116,17 +116,17 @@ const NaturalStonesPage: React.FC = () => {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-amber-300 to-amber-600 bg-clip-text text-transparent">
-                Přírodní kameny
+                Zásnubní prsteny
               </span>
             </h1>
             
             <div className="h-1 w-24 bg-amber-500 rounded mb-6"></div>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Přírodní kameny jsou svědectvím geologických zázraků naší planety. Naše exkluzivní kolekce šperků s přírodními kameny spojuje krásu a energii těchto vzácných nerostů s precizním řemeslným zpracováním. Každý kus je navržen tak, aby vyzdvihl přirozenou krásu kamene a vytvářel jedinečné spojení s jeho nositelem.
+              Zásnubní prsten je symbolem lásky, oddanosti a příslibu společné budoucnosti. Naše exkluzivní kolekce zásnubních prstenů nabízí jedinečné designy, které dokonale vyjádří hloubku vašich citů. Každý prsten je vytvořen s mimořádnou péčí a řemeslnou zručností, aby se stal dokonalým symbolem vašeho vztahu.
             </p>
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Pečlivě vybíráme pouze kameny té nejvyšší kvality a udržitelného původu, aby váš šperk byl nejen krásný, ale i eticky zodpovědný. Objevte jedinečnou energii a krásu přírodních kamenů v naší luxusní kolekci.
+              Vybíráme pouze nejkvalitnější diamanty a drahé kovy, abychom vytvořili šperky, které budou zářit stejně jako vaše láska. Náš tým odborníků vám pomůže najít prsten, který perfektně odpovídá vašemu stylu, preferencím a rozpočtu.
             </p>
             
             <button 
@@ -140,8 +140,8 @@ const NaturalStonesPage: React.FC = () => {
           <div className="md:w-1/2 relative">
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl transform rotate-3">
               <Image
-                src="/imgs/prirodni-kameny.jpg"
-                alt="Šperky s přírodními kameny"
+                src="/imgs/zasnubni-prsteny.jpg"
+                alt="Zásnubní prsteny"
                 fill
                 className="object-cover"
                 priority
@@ -162,18 +162,18 @@ const NaturalStonesPage: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16" ref={collectionRef}>
-            <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Exkluzivita & Kvalita</span>
+            <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Exkluzivita & Dokonalost</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Naše <span className="text-amber-500">přírodní</span> kameny
+              Naše <span className="text-amber-500">zásnubní</span> prsteny
             </h2>
             <div className="h-1 w-24 bg-amber-500 mx-auto rounded"></div>
             <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
-              Vyberte si z naší exkluzivní nabídky šperků s přírodními kameny, kde každý kus je ztělesněním přírodní krásy a řemeslné dokonalosti.
+              Vyberte si z naší exkluzivní kolekce zásnubních prstenů, kde každý kus vypráví příběh lásky a oddanosti.
             </p>
           </div>
           
           <section className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {naturalStones.map(({ id, name, price, image, description }) => (
+            {engagementRings.map(({ id, name, price, image, description }) => (
               <article
                 key={id}
                 className="bg-neutral-800 rounded-lg border border-neutral-700 hover:border-amber-500 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex flex-col"
@@ -219,7 +219,7 @@ const NaturalStonesPage: React.FC = () => {
         </div>
       </main>
 
-      {/* Info sekce o přírodních kamenech */}
+      {/* Info sekce o zásnubních prstenech */}
       <section className="py-20 bg-neutral-900 relative">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-neutral-800/40 rounded-xl p-10 border border-neutral-700 shadow-xl">
@@ -227,8 +227,8 @@ const NaturalStonesPage: React.FC = () => {
               <div className="md:w-1/3">
                 <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
                   <Image
-                    src="/imgs/prirodni-kameny.jpg"
-                    alt="Přírodní kámen detail"
+                    src="/imgs/zasnubni-prsteny.jpg"
+                    alt="Zásnubní prsten detail"
                     fill
                     className="object-cover"
                   />
@@ -237,7 +237,7 @@ const NaturalStonesPage: React.FC = () => {
               
               <div className="md:w-2/3">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                  Proč vybrat <span className="text-amber-500">přírodní kameny</span>?
+                  Proč vybrat <span className="text-amber-500">zásnubní prsten</span> u nás?
                 </h3>
                 
                 <div className="space-y-4">
@@ -248,7 +248,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Jedinečná krása</span> - Každý přírodní kámen je naprosto unikátní se svou vlastní barvou, strukturou a charakterem, což z vašeho šperku činí skutečný originál.
+                      <span className="text-amber-500 font-semibold">Jedinečný design</span> - Každý náš zásnubní prsten je navržen s důrazem na detail a estetiku, aby dokonale vyjádřil vaši lásku a oddanost.
                     </p>
                   </div>
                   
@@ -259,7 +259,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Energetické vlastnosti</span> - Po tisíciletí jsou přírodním kamenům přisuzovány léčivé a harmonizující vlastnosti, které mohou přinášet rovnováhu a pozitivní energii do vašeho života.
+                      <span className="text-amber-500 font-semibold">Certifikované diamanty</span> - Používáme pouze certifikované diamanty té nejvyšší kvality, abyste si mohli být jisti původem a hodnotou vašeho prstenu.
                     </p>
                   </div>
                   
@@ -270,7 +270,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Přírodní původ</span> - Přírodní kameny jsou vytvářeny samotnými geologickými procesy Země po miliony let, což z nich činí skutečné umělecké dílo matky přírody.
+                      <span className="text-amber-500 font-semibold">Ruční výroba</span> - Naši zkušení zlatníci ručně vyrábějí každý prsten s láskou a péčí, zajišťující dokonalý výsledek a dlouhou životnost.
                     </p>
                   </div>
                   
@@ -281,7 +281,7 @@ const NaturalStonesPage: React.FC = () => {
                       </svg>
                     </div>
                     <p className="text-gray-300">
-                      <span className="text-amber-500 font-semibold">Udržitelná volba</span> - Vybíráme kameny z etických zdrojů a podporujeme zodpovědnou těžbu, což činí z vašeho šperku nejen krásnou, ale i ekologicky uvědomělou volbu.
+                      <span className="text-amber-500 font-semibold">Osobní konzultace</span> - Nabízíme individuální konzultace, kde vám pomůžeme vybrat nebo navrhnout prsten přesně podle vašich představ a rozpočtu.
                     </p>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ const NaturalStonesPage: React.FC = () => {
                     href="/kontakt" 
                     className="inline-flex items-center text-amber-500 hover:text-amber-400 transition-colors"
                   >
-                    <span>Kontaktujte nás pro osobní konzultaci</span>
+                    <span>Sjednejte si osobní konzultaci</span>
                     <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
@@ -309,4 +309,4 @@ const NaturalStonesPage: React.FC = () => {
   );
 };
 
-export default NaturalStonesPage;
+export default EngagementRingsPage;

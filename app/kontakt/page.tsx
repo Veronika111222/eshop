@@ -180,7 +180,7 @@ export default function ContactPage() {
                       Důležité informace
                     </h2>
                     <p className="text-gray-300 mb-2">
-                      IČO: 12345678
+                      IČO: 87910675
                     </p>
                     <p className="text-gray-300">
                       Přijímáme platební karty i hotovost.

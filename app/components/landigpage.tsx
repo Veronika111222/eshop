@@ -59,7 +59,7 @@ const products = [
   { 
     id: 1, 
     title: "Diamantové šperky", 
-    image: "/imgs/diamanty.jpg",
+    image: "/imgs/diamond2.jpg",
     description: "Ručně vyráběné šperky z nejkvalitnějších diamantů.",
     price: "",
     link: "/produkty/diamant"
@@ -67,7 +67,7 @@ const products = [
   { 
     id: 2, 
     title: "Přírodní perly", 
-    image: "/imgs/perly.jpg",
+    image: "/imgs/perly4.jpg",
     description: "Elegantní perlové šperky z kvalitních přírodních perel.",
     price: "",
     link: "/produkty/perly",
@@ -75,7 +75,7 @@ const products = [
   { 
     id: 3, 
     title: "Přírodní kameny", 
-    image: "/imgs/prirodni kameny.jpg",
+    image: "/imgs/ametyst1.jpg",
     description: "Jedinečné šperky z vzácných přírodních kamenů.",
     price: "",
     link: "/přírodní-kameny"
@@ -83,7 +83,7 @@ const products = [
   { 
     id: 4, 
     title: "Snubní prsteny", 
-    image: "/imgs/snubni prsteny 4.jpg",
+    image: "/imgs/snubniprsteny1.jpg",
     description: "Dokonalé prsteny pro váš velký den a celý společný život.",
     price: "",
     link: "/zasnubni-snubni-prsteny"
@@ -107,7 +107,7 @@ const products = [
   { 
     id: 6, 
     title: "Náramky", 
-    image: "/imgs/naramky.jpg",
+    image: "/imgs/naramek1.jpg",
     description: "Elegantní náramky z pravého zlata a stříbra.",
     price: "",
     link: "/naramky"
@@ -115,7 +115,7 @@ const products = [
   { 
     id: 7, 
     title: "Přívěsky", 
-    image: "/imgs/privesky.jpg",
+    image: "/imgs/privesky3.jpg",
     description: "Originální přívěsky pro každou osobnost.",
     price: "",
     link: "/privesky"
@@ -139,7 +139,7 @@ const products = [
   { 
     id: 10, 
     title: "Soupravky", 
-    image: "/imgs/soupravky.jpg",
+    image: "/imgs/soupravky3.jpg",
     description: "Kompletní sady šperků pro dokonalý outfit.",
     price: "",
     link: "/soupravky"
@@ -321,8 +321,8 @@ const LandingPage: React.FC = () => {
                     <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2"></h3>
-                <p className="text-gray-400"></p>
+                <h3 className="text-xl font-bold text-white mb-2">O nás</h3>
+                <p className="text-gray-400">Tradice předávaná z generace na generaci již od roku 2000</p>
               </div>
               
               <div className="text-center p-6 rounded-lg border border-neutral-800 bg-neutral-800 hover:border-amber-500 transition-all duration-300">
